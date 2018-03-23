@@ -1,0 +1,64 @@
+{
+  "name": "ulog",
+  "version": "0.1.0",
+  "description": "A web practice project",
+  "main": "index.js",
+  "scripts": {
+    "build":"rollup -c && cp ./out/* ./htdocs/js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryant0226/ulog.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "bryant Wu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bryant0226/ulog/issues"
+  },
+  "homepage": "https://github.com/bryant0226/ulog#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.56.5",
+    "rollup-plugin-babel": "^3.0.3"
+  }
+}
+"babel":{
+"presets":¡i
+¡i 
+"env",
+{
+"targets":{
+"browsers":¡i
+"last 2 versions" 
+ ]
+},
+"modules": false
+}
+¡j
+¡j,
+"plugins":¡i
+"external-helpers"
+ ¡j
+}
+
+import babel from 'rollup-plugin-babel';
+export default{
+input:'src/index.js',
+output:{
+file: 'out/ulog.js',
+format: 'iife',
+sourcemap: 'true',
+},
+plugins:¡i
+babel({
+exclude: 'node_modules/**',
+})
+¡j,
+};
+
