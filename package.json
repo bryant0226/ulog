@@ -1,64 +1,37 @@
 {
   "name": "ulog",
   "version": "0.1.0",
-  "description": "A web practice project",
+  "description": "A web practice project.",
   "main": "index.js",
   "scripts": {
-    "build":"rollup -c && cp ./out/* ./htdocs/js", 
+    "build": "npm-run-all -s compile push",
+    "compile": "rollup -c",
+    "lint": "eslint --fix js > log/eslint.log",
+    "push": "cp ./out/* ./htdocs/js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bryant0226/ulog.git"
+    "url": "git+https://ywchiao@github.com/ywchiao/ulog.git"
   },
   "keywords": [
     "node.js"
   ],
-  "author": "bryant Wu",
+  "author": "Yiwei Chiao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bryant0226/ulog/issues"
+    "url": "https://github.com/ywchiao/ulog/issues"
   },
-  "homepage": "https://github.com/bryant0226/ulog#readme",
+  "homepage": "https://github.com/ywchiao/ulog#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "npm-run-all": "^4.1.2",
     "rollup": "^0.56.5",
-    "rollup-plugin-babel": "^3.0.3"
-  }
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "dependencies": {}
 }
-"babel":{
-"presets":¡i
-¡i 
-"env",
-{
-"targets":{
-"browsers":¡i
-"last 2 versions" 
- ]
-},
-"modules": false
-}
-¡j
-¡j,
-"plugins":¡i
-"external-helpers"
- ¡j
-}
-
-import babel from 'rollup-plugin-babel';
-export default{
-input:'src/index.js',
-output:{
-file: 'out/ulog.js',
-format: 'iife',
-sourcemap: 'true',
-},
-plugins:¡i
-babel({
-exclude: 'node_modules/**',
-})
-¡j,
-};
-
